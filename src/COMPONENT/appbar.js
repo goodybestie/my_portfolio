@@ -58,7 +58,7 @@ function DrawerAppBar(props) {
                 <Typography onClick={() => scrollToElement(contactPageRef)}>
                {item.contact}
                 </Typography>
-                <a href={MyCv} download={cvFileName}>
+                <a href={MyCv} download={cvFileName} >
                    <Button style={{background:"#fff", color:"#000" }}>
                       {item.cv}
                     </Button>

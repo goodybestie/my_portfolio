@@ -78,7 +78,10 @@ function App() {
           contactPageRef={contactPageRef}
           scrollToElement={scrollToElement}
         />
-        <Homepage ref={homePageRef}/>
+        <Homepage 
+        ref={homePageRef}
+         contactPageRef={contactPageRef}
+        />
         <AboutPage ref={aboutPageRef}/>
         <SkillPage ref={skillPageRef}/>
         <WorkPage ref={workPageRef}/>

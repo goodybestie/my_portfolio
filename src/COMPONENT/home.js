@@ -7,9 +7,17 @@ import { FaChevronRight } from "react-icons/fa";
 import { forwardRef } from "react";
 
 
-const Homepage = forwardRef(( props, ref) =>  {
+const Homepage = forwardRef(({ contactPageRef}, ref) =>  {
     console.log("Homepage ref:", ref);
     const profile = goodypic
+
+    const handleHireMe = () => {
+        if (contactPageRef && contactPageRef.current) {
+            contactPageRef.current.scrollIntoView({ behavior: 'smooth' });
+          } else {
+            console.log('Ref is not properly set.');
+          }
+    }
     return (
         <Box ref={ref}>
             
@@ -44,15 +52,16 @@ const Homepage = forwardRef(( props, ref) =>  {
                         <VscLayersActive color="#EEE2DE" />  Available for new product
                     </Typography>
                     <Box style={{ display: "flex", gap: "3rem" }}>
-                        <Button style={{ backgroundColor: "#FFA732",
+                       <Button onClick={()=>handleHireMe()} style={{ backgroundColor: "#FFA732",
                          color: "#000",
                           padding:"12px",
                           borderRadius:"10px", width:{md:"15%", xs:"7rem"} }}> Hire me 
                          <FaChevronRight style={{ marginLeft: "8px" }} /> 
                          </Button>
                          <Box sx={{mt:"13px", display:"flex", gap:"7px"}}>
-                        <Typography sx={{ color: "#EEE2DE",    }}> View Resume 
-                          </Typography>
+                     <a href="https://drive.google.com/file/d/1WLJkhdpbMLK8BTrhu4C5MYqR9XAmCvt9/view?usp=sharing" style={{textDecoration:"none"}}>  
+                      <Typography sx={{ color: "#EEE2DE",  cursor:"pointer",   }}> View Resume 
+                          </Typography></a>
                           <FaChevronRight  style={{  color:"#FFA732", marginTop:"4px" }}/>
                          </Box>
                     </Box>
