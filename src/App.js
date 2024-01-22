@@ -1,24 +1,94 @@
-import logo from './logo.svg';
+// import './App.css';
+// import { Box } from "@mui/material";
+// import DrawerAppBar from "./COMPONENT/appbar" 
+// import Homepage from "./COMPONENT/home"
+// import AboutPage from "./COMPONENT/Aboutpage"
+// import SkillPage from "./COMPONENT/skillpage"
+// import WorkPage from './COMPONENT/workpage';
+// import ContactPage from "./COMPONENT/contactpage"
+// import CopyRight from "./COMPONENT/copyright"
+// import React, { useRef } from 'react';
+
+// function App() {
+//   const myElementRef = useRef(null);
+
+//   const scrollToElement = () => {
+//     if (myElementRef.current) {
+//       myElementRef.current.scrollIntoView({ behavior: 'smooth' });
+//     }else{
+//       console.log(null)
+//     }
+//   };
+//   return (
+//     <>
+//     <Box sx={{backgroundColor:"#000"}}>
+//       <Box ref={myElementRef}>
+    
+//             <DrawerAppBar scrollToElement={scrollToElement}/>
+//       <Homepage />
+//             <AboutPage id="Aboutpage"/>
+//             <SkillPage  id="skillpage"/>
+//             <WorkPage id="workpage" />
+//             <ContactPage id="contactpage"/>
+//             </Box>
+//             <Box sx={{backgroundColor:"#FFA732"}}>
+//             <CopyRight />
+//             </Box>
+//             </Box>
+// </>
+//   );
+// }
+
+// export default App;
+
+// App.js
 import './App.css';
+import { Box } from "@mui/material";
+import DrawerAppBar from "./COMPONENT/appbar" 
+import Homepage from "./COMPONENT/home"
+import AboutPage from "./COMPONENT/Aboutpage"
+import SkillPage from "./COMPONENT/skillpage"
+import WorkPage from './COMPONENT/workpage';
+import ContactPage from "./COMPONENT/contactpage"
+import CopyRight from "./COMPONENT/copyright"
+import React, { useRef } from 'react';
 
 function App() {
+  const aboutPageRef = useRef(null);
+  const skillPageRef = useRef(null);
+  const workPageRef = useRef(null);
+  const contactPageRef = useRef(null);
+  const homePageRef= useRef(null)
+
+  const scrollToElement = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      console.log('Ref is null or not defined.');
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Box sx={{backgroundColor:"#000"}}>
+        <DrawerAppBar
+          aboutPageRef={aboutPageRef}
+          skillPageRef={skillPageRef}
+          workPageRef={workPageRef}
+          contactPageRef={contactPageRef}
+          scrollToElement={scrollToElement}
+        />
+        <Homepage ref={homePageRef}/>
+        <AboutPage ref={aboutPageRef}/>
+        <SkillPage ref={skillPageRef}/>
+        <WorkPage ref={workPageRef}/>
+        <ContactPage ref={contactPageRef}/>
+      <Box sx={{backgroundColor:"#FFA732"}}>
+      <CopyRight homePageRef={homePageRef} scrollToElement={() => scrollToElement(homePageRef)} />
+
+      </Box>
+      </Box>
+    </>
   );
 }
 
