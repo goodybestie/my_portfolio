@@ -76,7 +76,7 @@ const SkillPage = React.forwardRef((props, ref) => {
   ];
 
   useEffect(() => {
-    Aos.init({ duration: 3000, offset: 100, easing: 'ease-in-out' });
+    Aos.init({ duration: 2000, offset: 100, easing: 'ease-in-out' });
   }, []);
 
   return (
@@ -91,7 +91,7 @@ const SkillPage = React.forwardRef((props, ref) => {
     data-aos-anchor-placement="center-bottom"
     sx={{ display: "grid", gridTemplateColumns: {md:"1fr 1fr", xs:"1fr"}, gap: "20px", justifyContent: "center", padding:"5rem"  }}>
       {skillsData.map((category, index) => (
-        <Card key={index} sx={{ color: "#fff", opacity:"90%", ml: { md: "", xs: "" }, width:{md:"100%", xs:"16rem"}, borderRadius:"14px"   }}>
+        <Card key={index} sx={{ color: "#fff", opacity:"90%", ml: { md: "", xs: "" }, width:{md:"100%", xs:"17rem"}, borderRadius:"14px"   }}>
           <CardContent>
             <Box>
               <Typography variant="h5" sx={{color:"#FFA732"}}>
