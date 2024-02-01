@@ -48,15 +48,16 @@ import DrawerAppBar from "./COMPONENT/appbar"
 import Homepage from "./COMPONENT/home"
 import AboutPage from "./COMPONENT/Aboutpage"
 import SkillPage from "./COMPONENT/skillpage"
-import WorkPage from './COMPONENT/workpage';
+// import WorkPage from './COMPONENT/workpage';
 import ContactPage from "./COMPONENT/contactpage"
 import CopyRight from "./COMPONENT/copyright"
 import React, { useRef } from 'react';
+import ServicesPage from "./COMPONENT/Servicespage"
 
 function App() {
   const aboutPageRef = useRef(null);
   const skillPageRef = useRef(null);
-  const workPageRef = useRef(null);
+  const servicesPageRef = useRef(null);
   const contactPageRef = useRef(null);
   const homePageRef= useRef(null)
 
@@ -74,7 +75,7 @@ function App() {
         <DrawerAppBar
           aboutPageRef={aboutPageRef}
           skillPageRef={skillPageRef}
-          workPageRef={workPageRef}
+          servicesPageRef={servicesPageRef}
           contactPageRef={contactPageRef}
           scrollToElement={scrollToElement}
         />
@@ -84,7 +85,8 @@ function App() {
         />
         <AboutPage ref={aboutPageRef}/>
         <SkillPage ref={skillPageRef}/>
-        <WorkPage ref={workPageRef}/>
+        {/* <WorkPage ref={workPageRef}/> */}
+        <ServicesPage ref={servicesPageRef}  />
         <ContactPage ref={contactPageRef}/>
       <Box sx={{backgroundColor:"#FFA732"}}>
       <CopyRight homePageRef={homePageRef} scrollToElement={() => scrollToElement(homePageRef)} />

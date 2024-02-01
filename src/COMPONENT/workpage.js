@@ -21,7 +21,11 @@ const WorkPage = forwardRef((props, ref) => {
                 gap:{md:"0px", xs:"10px"},
                 padding:"40px",
                  }}>
-                <Box sx={{color:"#fff", mb:"10px", textAlign:"center", }}>
+                <Box sx={{color:"#fff", mb:"10px", textAlign:"center",
+                '&:hover':{
+                    backgroundColor:'red',
+                },
+            }} className="work">
                 <img src={blogpic} alt="blog" style={{ borderRadius:"10px", width:"90%"}}/>
                 <Typography  variant="h6">Web Development</Typography>
                 </Box>

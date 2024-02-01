@@ -21,7 +21,8 @@ import MyCv from "./IMAGE/MyCv.pdf"
 const drawerWidth = 240;
 const navItems = [{
   about:'About',
-   work:"Work",
+  //  work:"Work",
+  services:"Services",
     testimonies:"Skills",
      contact: 'Contact',
       cv:"Download CV"}];
@@ -29,7 +30,7 @@ const logo = GoodyCode
 const cvFileName = MyCv
 
 function DrawerAppBar(props) {
-  const { window, scrollToElement, aboutPageRef, skillPageRef, workPageRef, contactPageRef } = props;
+  const { window, scrollToElement, aboutPageRef, skillPageRef, servicesPageRef, contactPageRef } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -44,7 +45,7 @@ function DrawerAppBar(props) {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding sx={{color: '#B6C4B6'}}>
+          <ListItem key={item} disablePadding sx={{color: '#000'}}>
             <ListItemButton sx={{ textAlign: 'center',display: 'flex', gap:"20px", flexDirection:"column" }}>
             <Typography onClick={() => scrollToElement(aboutPageRef)}>
                {item.about}
@@ -52,8 +53,8 @@ function DrawerAppBar(props) {
                 <Typography onClick={() => scrollToElement(skillPageRef)}>
                {item.testimonies}
                 </Typography>
-                <Typography onClick={() => scrollToElement(workPageRef)}>
-               {item.work}
+                <Typography onClick={() => scrollToElement(servicesPageRef)}>
+               {item.services}
                 </Typography>
                 <Typography onClick={() => scrollToElement(contactPageRef)}>
                {item.contact}
@@ -108,8 +109,8 @@ function DrawerAppBar(props) {
                 <Typography onClick={() => scrollToElement(skillPageRef)}>
                {item.testimonies}
                 </Typography>
-                <Typography onClick={() => scrollToElement(workPageRef)}>
-               {item.work}
+                <Typography onClick={() => scrollToElement(servicesPageRef)}>
+               {item.services}
                 </Typography>
                 <Typography onClick={() => scrollToElement(contactPageRef)}>
                {item.contact}

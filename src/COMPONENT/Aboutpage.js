@@ -1,14 +1,22 @@
 import { Box, Typography} from "@mui/material";
-import aboutpic from "./IMAGE/aboutpic.png"
+// import aboutpic from "./IMAGE/aboutpic.png"
+import pics2 from "./IMAGE/pics2.jpg"
+
 import { FaCheck } from "react-icons/fa";
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 
 
 
 const AboutPage = forwardRef((props, ref) => {
-    const AboutProfile = aboutpic
+  useEffect(() => {
+    Aos.init({ duration: 3000, offset: 100, easing: 'ease-in-out' });
+  }, []);
+    const AboutProfile = pics2
     return(
-        <Box ref={ref}>
+        <Box ref={ref} >
             <Typography variant="h4" sx={{textAlign:"center", color:"#FFA732", mt:"30px", mb:"30px"}}>About Me</Typography>
             <Box 
            sx={{
@@ -17,6 +25,7 @@ const AboutPage = forwardRef((props, ref) => {
             flexDirection: { md: "row", xs: "column" },
             justifyContent: "space-between",
             mb:'30px',
+            // background:"#fff", opacity:"90%",
             // gap:"20px",
             /* Larger screens styles */
             '.about-image': {
@@ -32,8 +41,11 @@ const AboutPage = forwardRef((props, ref) => {
               },
             },
           }}
+          data-aos="fade-up"
+            data-aos-delay={100}
+            data-aos-anchor-placement="center-bottom"
         >
-                     <img src={AboutProfile} alt="profile" className="about-image"/>
+                     <img src={AboutProfile} alt="profile" className="about-image" />
                      <Box sx={{color: '#EEE2DE', width:{md:"65%", xs:"100%"}, mb:"30px",}}>
                       <Typography sx={{ mb:"30px",}}>Curious about me? Here you have it:</Typography>
                 <Typography sx={{ mb:"30px", fontSize:"15px"}} >

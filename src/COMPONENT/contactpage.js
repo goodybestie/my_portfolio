@@ -18,7 +18,7 @@ const ContactPage= forwardRef((props, ref) => {
 
   return (
     <Box>
-      <Box ref={ref} sx={{textAlign:"center", color:"#FFA732"}}>
+      <Box ref={ref} sx={{textAlign:"center", color:"#FFA732", mt:"3rem"}}>
         <Typography variant="h4">Contact Me</Typography>
       </Box>
       <Box sx={{display:"flex", flexDirection:{md:"row", xs:"column"}, padding:{xs:"3rem", md:"none"}, justifyContent:"space-around" , mt:"10px", }}>

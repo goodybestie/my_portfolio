@@ -1,0 +1,13 @@
+.work, img{
+    /* transition: transform 0.5s; */
+    /* background: #FFA732; */
+    /* opacity: 0; */
+    transition: transform 0.5s ease-in-out;
+    
+}
+.work, img:hover{
+    transform: translateY(-10px);
+}
+img:hover{
+    /* background-color: red; */
+}

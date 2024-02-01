@@ -1,47 +1,136 @@
-import { Box, Typography } from "@mui/material"
-// import typescripticon from "../COMPONENT/IMAGE/typescripticon.png"
-// import javascripticon from "../COMPONENT/IMAGE/javascripticon.png"
-// import nexticon from "../COMPONENT/IMAGE/nexticon.webp"
-// import reacticon from "../COMPONENT/IMAGE/reacticon.png"
-import React, { forwardRef } from "react"
+// import { Box, Typography, LinearProgress } from "@mui/material";
+// import { MdOutlineStarOutline } from "react-icons/md";
+// import React from "react";
+
+// const SkillPage = React.forwardRef((props, ref) => {
+//   const skillsData = [
+//     { category: 'Front-End Development', skills: ['React.js', 'Typscript', 'Next.js'] },
+//     { category: 'Web Design', skills: ['HTML', 'CSS', 'Bootstrap 5'] },
+//     { category: 'Graphic Design', skills: ['CorelDraw', 'Adobe Illustrator', 'Adobe Photoshop'] },
+//   ];
+
+//   return (
+//     <Box ref={ref}>
+//       <Box>
+//         <Typography variant="h4" sx={{ textAlign: "center", color: "#FFA732", mb: "10px" }}>Skills</Typography>
+//         <Typography sx={{ textAlign: "center", color: "#EEE2DE" }}>The Skills tool technology I'm really good at....</Typography>
+//       </Box>
+
+//       {skillsData.map((category, index) => (
+//         <Box key={index} sx={{ color: "#fff",  mt: "2rem", ml:{md:"20rem", xs:"2rem"} }}>
+//           <Box>
+//             <Typography><MdOutlineStarOutline color="#FFA732"  />{category.category}</Typography>
+//           </Box>
+
+//           {category.skills.map((skill, skillIndex) => (
+//             <Box key={skillIndex} sx={{ marginBottom: '1rem' }}>
+//               <LinearProgress
+//                 variant="determinate"
+//                 value={Math.floor(Math.random() * 100)} // Replace this with the actual skill level
+//                 sx={{
+//                   height: '8px', // Adjusted height
+//                   borderRadius: '4px', 
+//                   width:{md:"53%", xs:"90%"},
+//                   // Adjusted border-radius
+//                   '& .MuiLinearProgress-bar': {
+//                       borderRadius: '4px',
+//                       background: `linear-gradient(90deg, #FFA732 50%, #EFECEC 50%)`,
+                      
+//                     },
+//                 }}
+//               />
+//               <Box sx={{display: "grid",  gridTemplateColumns: "1fr 1fr"}}>
+//                 <Typography variant="h6" sx={{ color: '#FFA732', marginBottom: '0.5rem' }}>
+//                   {skill}
+//                 </Typography>
+//               <Typography sx={{ color: '#FFA732', marginTop: '0.5rem', ml:{xs:"5rem", md:"0.4rem"}}}>
+//                 {Math.floor(Math.random() * 100)}% {/* Replace this with the actual skill percentage */}
+//               </Typography>
+//               </Box>
+//             </Box>
+//           ))}
+//         </Box>
+//       ))}
+//     </Box>
+//   );
+// });
+
+// export default SkillPage;
+
+
+import React from "react";
+import { Box, Typography, LinearProgress, Card, CardContent } from "@mui/material";
 import { MdOutlineStarOutline } from "react-icons/md";
+import { useEffect } from "react";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
-const SkillPage = forwardRef((props, ref) => {
+const SkillPage = React.forwardRef((props, ref) => {
+  const skillsData = [
+    { category: 'Front-End Development', skills: ['React.js', 'Typscript', 'Next.js', "React Native"] },
+    { category: 'Web Design', skills: ['HTML', 'CSS', 'Bootstrap 5'] },
+    { category: 'Graphic Design', skills: ['CorelDraw', 'Adobe Illustrator', 'Adobe Photoshop'] },
+    { category: 'Phone App', skills: ["Adobe XD", "Sketch", "Figma","Flutter (Dart)"] },
+    { category: 'Logo Design', skills: ['CorelDraw', 'Adobe Illustrator', 'Adobe Photoshop'] },
+    { category: 'UI/UX', skills: ["Adobe XD", "Sketch", "Figma","Flutter (Dart)"] },
+  ];
 
-    // const icon = [{react:reacticon, next:nexticon, java:javascripticon, typescript:typescripticon}]
+  useEffect(() => {
+    Aos.init({ duration: 3000, offset: 100, easing: 'ease-in-out' });
+  }, []);
 
-    return(
-        <Box ref={ref}>
-            <Box >
-                <Typography variant="h4" sx={{textAlign:"center",color:"#FFA732", mb:"10px"}}>Skills</Typography>
-                <Typography sx={{textAlign:"center", color:"#EEE2DE"}}>The Skills tool technology i'm really good at....</Typography>
+  return (
+    <Box ref={ref}>
+      <Box>
+        <Typography variant="h4" sx={{ textAlign: "center", color: "#FFA732", mb: "10px" }}>Skills</Typography>
+        <Typography sx={{ textAlign: "center", color: "#EEE2DE" }}>The Skills tool technology I'm really good at....</Typography>
+      </Box>
+    <Box
+    data-aos="fade-up"
+    data-aos-delay={ 100}
+    data-aos-anchor-placement="center-bottom"
+    sx={{ display: "grid", gridTemplateColumns: {md:"1fr 1fr", xs:"1fr"}, gap: "20px", justifyContent: "center", padding:"5rem"  }}>
+      {skillsData.map((category, index) => (
+        <Card key={index} sx={{ color: "#fff", opacity:"90%", ml: { md: "", xs: "" }, width:{md:"100%", xs:"16rem"}, borderRadius:"14px"   }}>
+          <CardContent>
+            <Box>
+              <Typography variant="h5" sx={{color:"#FFA732"}}>
+                <MdOutlineStarOutline color="#FFA732" /> {category.category}
+              </Typography>
             </Box>
-            <Box sx={{color:"#fff", textAlign:"center", mt:"2rem" }}>
-                <Box >
 
-            <Typography> <MdOutlineStarOutline color="#FFA732"/>Front-End Development</Typography>
-            <Typography sx={{mb:"2rem"}}>(React js, Typscript and Next js)</Typography>
-            </Box>
-            <Box >
-           <Typography><MdOutlineStarOutline color="#FFA732"/> web designer</Typography>
-           <Typography sx={{mb:"2rem"}}> (HTML CSS and BOOTSTRAP 5)</Typography>
-           </Box>
-           <Box >
-           <Typography><MdOutlineStarOutline color="#FFA732"/>logo designer, and graphics designer</Typography>
-           <Typography>(CorelDraw, Adobe Illustrator, Adobe Photoshop)</Typography>
-           </Box>
-                {/* {
-                    icon.map((icon) => (
-                        <Box key={icon} sx={{display:"flex", justifyContent:"center", mt:"30px", gap:"15px", mb:"30px"  }}>
-                            <img src={icon.java} alt="java" style={{width:"7%"}}/>
-                            <img src={icon.react} alt="react" style={{width:"7%"}} />
-                            <img src={icon.next} alt="next" style={{width:"7%"}}/>
-                            <img src={icon.typescript} alt="typescript" style={{width:"7%"}}/>
-                        </Box>
-                    ))
-                } */}
-            </Box>
-        </Box>
-    )
-})
-export default SkillPage
+            {category.skills.map((skill, skillIndex) => (
+              <Box key={skillIndex} sx={{ }}>
+                <LinearProgress
+                  variant="determinate"
+                  value={Math.floor(Math.random() * 100)} // Replace this with the actual skill level
+                  sx={{
+                    height: '8px', // Adjusted height
+                    borderRadius: '4px',
+                    width: { md: "95%", xs: "100%" },
+                    // Adjusted border-radius
+                    '& .MuiLinearProgress-bar': {
+                      borderRadius: '4px',
+                      background: `linear-gradient(90deg, #FFA732 50%, #EFECEC 50%)`,
+                    },
+                  }}
+                />
+                <Box sx={{ display: "grid", gridTemplateColumns: "1fr 1fr",color: '#000',  }}>
+                  <Typography variant="h6" >
+                    {skill}
+                  </Typography>
+                  <Typography sx={{ ml: { xs: "5rem", md: "14rem" } }}>
+                    {Math.floor(Math.random() * 100)}% {/* Replace this with the actual skill percentage */}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </CardContent>
+        </Card>
+      ))}
+    </Box>
+    </Box>
+  );
+});
+
+export default SkillPage;

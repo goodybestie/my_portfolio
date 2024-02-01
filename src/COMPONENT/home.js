@@ -4,10 +4,14 @@ import goodypic from "./IMAGE/goodypic.png"
 import { VscLocation } from "react-icons/vsc";
 import { VscLayersActive } from "react-icons/vsc";
 import { FaChevronRight } from "react-icons/fa";
-import { forwardRef } from "react";
-
-
+import { forwardRef, useEffect } from "react";
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 const Homepage = forwardRef(({ contactPageRef}, ref) =>  {
+    useEffect(() => {
+        Aos.init({ duration: 3000, offset: 100, easing: 'ease-in-out' });
+      }, []);
+      
     console.log("Homepage ref:", ref);
     const profile = goodypic
 
@@ -66,7 +70,9 @@ const Homepage = forwardRef(({ contactPageRef}, ref) =>  {
                          </Box>
                     </Box>
                 </Box>
-                <img src={profile} alt="profile" style={{ width: "60%", marginBottom: "20px", }} />
+                <img src={profile} alt="profile" style={{ width: "60%", marginBottom: "20px", }} data-aos="fade-up"
+            data-aos-delay={100}
+            data-aos-anchor-placement="center-bottom"  />
 
             </Box>
             {/* <Box sx={{backgroundColor:"#000"}}>
