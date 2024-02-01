@@ -22,7 +22,7 @@ const cardData = [
   {
     id:"https://goodyblog.netlify.app/",
     title: 'Web Development',
-    description: 'Lizards are a widespread group of squamate reptiles',
+    description: 'Lizards are a widespread group of squamate ',
     image: code,
   },
   {
@@ -38,7 +38,7 @@ const cardData = [
   },
   {
     title: 'Gaphics Design',
-    description: 'Lizards are a widespread group of squamate reptiles, ',
+    description: 'Lizards are a widespread group of squamate  ',
     image: graphics,
   },
   {
