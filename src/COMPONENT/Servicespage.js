@@ -26,7 +26,7 @@ const cardData = [
     image: code,
   },
   {
-    id:"https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query=app%20design&type=photo",
+    // id:"https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query=app%20design&type=photo",
     title: 'Phone App',
     description: 'Another description for the second card.',
     image: phone,
