@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Box, Button,  Typography, } from '@mui/material';
+import { Box,   Typography, } from '@mui/material';
 import { BsTwitterX } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
@@ -86,7 +85,7 @@ const ContactPage= forwardRef((props, ref) => {
       color:"#EEE2DE"
     }}/>
     </a>
-    <a href=''> <FaWhatsapp style={{ 
+     <FaWhatsapp style={{ 
       border: "2px solid #FFA732", 
       borderRadius: "50%", 
       padding: "0.2rem",
@@ -94,7 +93,7 @@ const ContactPage= forwardRef((props, ref) => {
       fontSize:"2rem",
       color:"#EEE2DE"
     }}/>
-    </a>
+   
                      <a href='https://github.com/dashboard'> <FaGithub style={{ 
       border: "2px solid #FFA732", 
       borderRadius: "50%", 

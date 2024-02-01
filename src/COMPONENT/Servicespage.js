@@ -22,7 +22,7 @@ const cardData = [
   {
     id:"https://goodyblog.netlify.app/",
     title: 'Web Development',
-    description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    description: 'Lizards are a widespread group of squamate reptiles',
     image: code,
   },
   {
@@ -38,7 +38,7 @@ const cardData = [
   },
   {
     title: 'Gaphics Design',
-    description: 'Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica',
+    description: 'Lizards are a widespread group of squamate reptiles, ',
     image: graphics,
   },
   {
