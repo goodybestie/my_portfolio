@@ -49,7 +49,7 @@ const ContactPage= forwardRef((props, ref) => {
       cursor:"pointer",
       fontSize:"2rem"
     }} />
-<Typography>+232-8131302861</Typography>
+<Typography>+232-9026048708</Typography>
    </Box>
    </Box>
 </Box>
