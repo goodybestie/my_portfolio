@@ -67,12 +67,9 @@ import 'aos/dist/aos.css';
 
 const SkillPage = React.forwardRef((props, ref) => {
   const skillsData = [
-    { category: 'Front-End Development', skills: ['React.js', 'Typscript', 'Next.js', "React Native"] },
+    { category: 'Front-End Development', skills: ['React.js', 'Typscript', 'Next.js'] },
     { category: 'Web Design', skills: ['HTML', 'CSS', 'Bootstrap 5'] },
     { category: 'Graphic Design', skills: ['CorelDraw', 'Adobe Illustrator', 'Adobe Photoshop'] },
-    { category: 'Phone App', skills: ["Adobe XD", "Sketch", "Figma","Flutter (Dart)"] },
-    { category: 'Logo Design', skills: ['CorelDraw', 'Adobe Illustrator', 'Adobe Photoshop'] },
-    { category: 'UI/UX', skills: ["Adobe XD", "Sketch", "Figma","Flutter (Dart)"] },
   ];
 
   useEffect(() => {
@@ -89,7 +86,7 @@ const SkillPage = React.forwardRef((props, ref) => {
     data-aos="fade-up"
     data-aos-delay={ 100}
     data-aos-anchor-placement="center-bottom"
-    sx={{ display: "grid", gridTemplateColumns: {md:"1fr 1fr", xs:"1fr"}, gap: "20px", justifyContent: "center", padding:"5rem"  }}>
+    sx={{ display: "grid", gridTemplateColumns: {xs: "1fr", sm: "1fr 1fr", lg: "1fr 1fr"  }, gap: "20px",   justifyContent: "center", padding:"5rem"  }}>
       {skillsData.map((category, index) => (
         <Card key={index} sx={{ color: "#fff", opacity:"90%", ml: { md: "", xs: "" }, width:{md:"100%", xs:"17rem"}, borderRadius:"14px"   }}>
           <CardContent>

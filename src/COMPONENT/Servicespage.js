@@ -25,27 +25,13 @@ const cardData = [
     description: 'Lizards are a widespread group of squamate ',
     image: code,
   },
-  {
-    // id:"https://www.freepik.com/search?format=search&last_filter=type&last_value=photo&query=app%20design&type=photo",
-    title: 'Phone App',
-    description: 'Another description for the second card.',
-    image: phone,
-  },
-  {
-    title: 'UI/UX',
-    description: 'Yet another description for the third card.',
-    image: ui,
-  },
+  
   {
     title: 'Gaphics Design',
     description: 'Lizards are a widespread group of squamate  ',
     image: graphics,
   },
-  {
-    title: 'Logo Design',
-    description: 'Another description for the second card.',
-    image: logo,
-  },
+  
   {
     title: 'Web Design',
     description: 'Yet another description for the third card.',
@@ -63,9 +49,10 @@ const ServicesPage = forwardRef((props, ref) => {
       <Typography
         variant="h4"
         sx={{
+          
           textAlign: 'center',
-          width: { md: '35rem', xs: '20rem' },
-          ml: { md: '25rem', xs: '0rem' },
+          width: { lg: '35rem', sm:"35rem", xs: '20rem' },
+          ml: { lg: '25rem', xs: '0rem', sm:"8rem" },
           mb: '1rem',
         }}
       >
@@ -77,7 +64,7 @@ const ServicesPage = forwardRef((props, ref) => {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: { md: '1fr 1fr 1fr', xs: '1fr' },
+          gridTemplateColumns: {xs: "1fr", sm: "1fr 1fr ", lg: "1fr 1fr 1fr"  },
           padding: { md: '50px 60px', xs: '40px 30px' },
           gap: '2rem',
           ml: { md: "5rem", xs: "0rem" },

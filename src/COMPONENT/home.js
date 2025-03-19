@@ -63,7 +63,7 @@ const Homepage = forwardRef(({ contactPageRef}, ref) =>  {
                          <FaChevronRight style={{ marginLeft: "8px" }} /> 
                          </Button>
                          <Box sx={{mt:"13px", display:"flex", gap:"7px"}}>
-                     <a href="https://drive.google.com/file/d/1WLJkhdpbMLK8BTrhu4C5MYqR9XAmCvt9/view?usp=sharing" style={{textDecoration:"none"}}>  
+                     <a href="https://drive.google.com/file/d/16a4v9XtGOrSvJ34w43wfEZgRc61PolwI/view?usp=sharing" style={{textDecoration:"none"}}>  
                       <Typography sx={{ color: "#EEE2DE",  cursor:"pointer",   }}> View Resume 
                           </Typography></a>
                           <FaChevronRight  style={{  color:"#FFA732", marginTop:"4px" }}/>

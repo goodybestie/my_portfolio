@@ -24,6 +24,7 @@ const AboutPage = forwardRef((props, ref) => {
             padding: { xs: "20px", md: "30px" },
             flexDirection: { md: "row", xs: "column" },
             justifyContent: "space-between",
+            alignItems:"center",
             mb:'30px',
             // background:"#fff", opacity:"90%",
             // gap:"20px",
