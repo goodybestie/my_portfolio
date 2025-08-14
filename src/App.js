@@ -71,7 +71,7 @@ function App() {
 
   return (
     <>
-      <Box sx={{backgroundColor:"#000"}}>
+      <Box sx={{backgroundColor:"black"}}>
         <DrawerAppBar
           aboutPageRef={aboutPageRef}
           skillPageRef={skillPageRef}
@@ -88,7 +88,7 @@ function App() {
         {/* <WorkPage ref={workPageRef}/> */}
         <ServicesPage ref={servicesPageRef}  />
         <ContactPage ref={contactPageRef}/>
-      <Box sx={{backgroundColor:"#FFA732"}}>
+      <Box sx={{ backgroundColor: "#f5f5f5"}}>
       <CopyRight homePageRef={homePageRef} scrollToElement={() => scrollToElement(homePageRef)} />
 
       </Box>

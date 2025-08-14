@@ -15,14 +15,14 @@ const CopyRight = forwardRef(({ homePageRef }, ref) => {
 };
 
   return (
-    <Box sx={{}}>
+    <Box sx={{padding:"50px"}}>
       <Box sx={{
         display: "flex",
         justifyContent: "space-around",
         padding: "10px",
         ml: { md: "20rem", xs: "1rem" },
       }}>
-        <Box sx={{ color: "#ffffff", mt: "1rem" }}>
+        <Box sx={{ color: "", mt: "1rem",  }}>
           <Typography>GoodyCode @2023, All Rights Reserved</Typography>
         </Box>
         <Box sx={{ fontSize: "2rem", cursor: "pointer" }} onClick={() => handleArrowClick()}>

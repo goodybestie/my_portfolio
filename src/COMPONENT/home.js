@@ -28,63 +28,106 @@ const Homepage = forwardRef(({ contactPageRef}, ref) =>  {
             {/* <Box sx={{backgroundColor:"#000"}}>
             <DrawerAppBar />
             </Box> */}
-            <Box sx={{backgroundColor:"#000"}}>
-            <Box sx={{
-                display: "flex",
-                padding: { xs: "20px", md: "40px" },
-                flexDirection: { md: "row", xs: "column-reverse" },
+          <Box
+  sx={{
+    display: "flex",
+    flexDirection: { xs: "column-reverse", md: "row" },
+    alignItems: { xs: "center", md: "flex-start" }, // Align top in desktop
+    justifyContent: "space-between",
+    padding: { xs: "20px", md: "50px" },
+    gap: { xs: "20px", md: "40px" },
+  }}
+>
 
-                alignItems: "center",
-            }}>
-                <Box>
-                    <Typography
-                        sx={{
-                            color: "#FFA732",
-                            mb: "10px",
-                            fontSize: { xs: "20px", md: "30px" }
-                        }}>
-                        Hi i'm GoodyCode <FaHandsClapping color="orange" />
-                    </Typography>
-                    <Typography sx={{ color: '#008080', width: { md: "60%", xs: "100%" }, mb: "30px" }}>
-                        i'm a front-end developer, A graduate of Computer Science with a degree of Higher National diploma.
-                        i have passion for creating interactive websites and web application to give user maximum user-experience and comfort smoothe flow of operations while working.
-                       </Typography>
-                    <Typography sx={{ color: '#EEE2DE', mb: "7px" }}>
-                        <VscLocation color="#EEE2DE" /> Ikot Ekpene, Akwa Ibom State.
-                    </Typography>
-                    <Typography sx={{ color: '#EEE2DE', mb: "33px" }}>
-                        <VscLayersActive color="#EEE2DE" />  Available for new product
-                    </Typography>
-                    <Box style={{ display: "flex", gap: "3rem" }}>
-                       <Button onClick={()=>handleHireMe()} style={{ backgroundColor: "#FFA732",
-                         color: "#000",
-                          padding:"12px",
-                          borderRadius:"10px", width:{md:"15%", xs:"7rem"} }}> Hire me 
-                         <FaChevronRight style={{ marginLeft: "8px" }} /> 
-                         </Button>
-                         <Box sx={{mt:"13px", display:"flex", gap:"7px"}}>
-                     <a href="https://drive.google.com/file/d/16a4v9XtGOrSvJ34w43wfEZgRc61PolwI/view?usp=sharing" style={{textDecoration:"none"}}>  
-                      <Typography sx={{ color: "#EEE2DE",  cursor:"pointer",   }}> View Resume 
-                          </Typography></a>
-                          <FaChevronRight  style={{  color:"#FFA732", marginTop:"4px" }}/>
-                         </Box>
-                    </Box>
-                </Box>
-                <img src={profile} alt="profile" style={{ width: "60%", marginBottom: "20px", }} data-aos="fade-up"
-            data-aos-delay={100}
-            data-aos-anchor-placement="center-bottom"  />
+  {/* Left (Text) Section */}
+  <Box sx={{ flex: 1 }}>
+    <Typography
+      sx={{
+        color: "#FFA732",
+        mb: "10px",
+        fontSize: { xs: "20px", md: "30px" },
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+      }}
+    >
+      Hi I'm GoodyCode <FaHandsClapping color="orange" />
+    </Typography>
 
-            </Box>
-            {/* <Box sx={{backgroundColor:"#000"}}>
-            <AboutPage />
-            <SkillPage />
-            <WorkPage />
-            <ContactPage />
-            </Box>
-            <Box sx={{backgroundColor:"#FFA732"}}>
-            <CopyRight />
-            </Box> */}
-            </Box>
+    <Typography
+      sx={{
+        color: "#008080",
+        width: "100%",
+        maxWidth: "500px",
+        mb: "30px",
+      }}
+    >
+      I'm a front-end developer, a graduate of Computer Science with a Higher
+      National Diploma. I have a passion for creating interactive websites and
+      web applications to give users maximum experience and smooth operation.
+    </Typography>
+
+    <Typography sx={{ color: '#EEE2DE', mb: "7px", display: "flex", alignItems: "center", gap: "8px" }}>
+      <VscLocation color="#EEE2DE" /> Uyo, Akwa Ibom State.
+    </Typography>
+
+    <Typography sx={{ color: '#EEE2DE', mb: "33px", display: "flex", alignItems: "center", gap: "8px" }}>
+      <VscLayersActive color="#EEE2DE" /> Available for new product
+    </Typography>
+
+    <Box sx={{ display: "flex", gap: "3rem", flexWrap: "wrap" }}>
+      <Button
+        onClick={handleHireMe}
+        sx={{
+          backgroundColor: "#FFA732",
+          color: "#000",
+          padding: "12px",
+          borderRadius: "10px",
+        }}
+      >
+        Hire me <FaChevronRight style={{ marginLeft: "8px" }} />
+      </Button>
+
+      <Box sx={{ mt: "13px", display: "flex", gap: "7px", alignItems: "center" }}>
+        <a
+          href="https://drive.google.com/file/d/16a4v9XtGOrSvJ34w43wfEZgRc61PolwI/view?usp=sharing"
+          style={{ textDecoration: "none" }}
+        >
+          <Typography sx={{ color: "#EEE2DE", cursor: "pointer" }}>
+            View Resume
+          </Typography>
+        </a>
+        <FaChevronRight style={{ color: "#FFA732" }} />
+      </Box>
+    </Box>
+  </Box>
+
+  {/* Right (Image) Section */}
+  <Box
+    sx={{
+      flex: 1,
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+    }}
+    data-aos="fade-up"
+    data-aos-delay={100}
+    data-aos-anchor-placement="center-bottom"
+  >
+    <img
+  src={profile}
+  alt="profile"
+  style={{
+    width: "50%",
+    height: "50%",
+    borderRadius: "12px", // Circle look
+    objectFit: "contain",
+  }}
+/>
+
+  </Box>
+</Box>
+
         </Box>
     )
 })
