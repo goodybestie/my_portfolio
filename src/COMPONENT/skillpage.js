@@ -14,19 +14,19 @@ useEffect(() => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A modern, full-stack e-commerce solution with real-time inventory management, secure payments, and admin dashboard.',
+      title: 'Cake Business Site',
+      description: 'A user get to order any cake of his/her choice, can also send an email.',
       image: '/exquisite.png',
-      tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe'],
+      tags: ['React', 'TypeScript'],
       liveDemo: '#',
       code: '#'
     },
     {
       id: 2,
-      title: 'Task Management App',
-      description: 'Collaborative project management tool with real-time updates, team collaboration features, and advanced analytics.',
+      title: 'Photographer Portfolio',
+      description: 'A simple landing Page of a Photographer portfolio',
       image: '/portfolio.png',
-      tags: ['Next.js', 'Prisma', 'tRPC', 'Tailwind CSS'],
+      tags: ['Next.js', "TypeScript", 'Tailwind CSS'],
       liveDemo: '#',
       code: '#'
     },

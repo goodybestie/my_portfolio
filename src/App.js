@@ -1,54 +1,10 @@
-// import './App.css';
-// import { Box } from "@mui/material";
-// import DrawerAppBar from "./COMPONENT/appbar" 
-// import Homepage from "./COMPONENT/home"
-// import AboutPage from "./COMPONENT/Aboutpage"
-// import SkillPage from "./COMPONENT/skillpage"
-// import WorkPage from './COMPONENT/workpage';
-// import ContactPage from "./COMPONENT/contactpage"
-// import CopyRight from "./COMPONENT/copyright"
-// import React, { useRef } from 'react';
 
-// function App() {
-//   const myElementRef = useRef(null);
-
-//   const scrollToElement = () => {
-//     if (myElementRef.current) {
-//       myElementRef.current.scrollIntoView({ behavior: 'smooth' });
-//     }else{
-//       console.log(null)
-//     }
-//   };
-//   return (
-//     <>
-//     <Box sx={{backgroundColor:"#000"}}>
-//       <Box ref={myElementRef}>
-    
-//             <DrawerAppBar scrollToElement={scrollToElement}/>
-//       <Homepage />
-//             <AboutPage id="Aboutpage"/>
-//             <SkillPage  id="skillpage"/>
-//             <WorkPage id="workpage" />
-//             <ContactPage id="contactpage"/>
-//             </Box>
-//             <Box sx={{backgroundColor:"#FFA732"}}>
-//             <CopyRight />
-//             </Box>
-//             </Box>
-// </>
-//   );
-// }
-
-// export default App;
-
-// App.js
 import './App.css';
 import { Box } from "@mui/material";
 import DrawerAppBar from "./COMPONENT/appbar" 
 import Homepage from "./COMPONENT/home"
 import AboutPage from "./COMPONENT/Aboutpage"
 import SkillPage from "./COMPONENT/skillpage"
-// import WorkPage from './COMPONENT/workpage';
 import ContactPage from "./COMPONENT/contactpage"
 import CopyRight from "./COMPONENT/copyright"
 import React, { useRef } from 'react';

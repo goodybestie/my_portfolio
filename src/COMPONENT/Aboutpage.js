@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, forwardRef } from 'react';
 import { Box, Typography, Card, CardContent, Chip, Grid } from "@mui/material";
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { FaCode, FaPaintBrush, FaRocket, FaUsers } from 'react-icons/fa';
+import { FaCode,  FaRocket, FaUsers } from 'react-icons/fa';
 
 const skills = [
   "React", "TypeScript", "Next.js",  "Git",
   "Tailwind CSS", "vite", "MUI", 'MANTINE', "REST APIs", "Testing"
 ];
 
-const AboutPage = () => {
+const AboutPage = forwardRef((props, ref) => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
   return (
-    <Box sx={{ px: { xs: 2, md: 8 }, py: { xs: 4, md: 6 }, bgcolor: 'background.default' }}>
+    <Box sx={{ px: { xs: 2, md: 8 }, py: { xs: 4, md: 6 }, bgcolor: 'background.default' }} ref={ref}>
       {/* Header */}
       <Typography
         variant="h3"
@@ -105,6 +105,7 @@ const AboutPage = () => {
       </Grid>
     </Box>
   );
-};
+}
+  );
 
 export default AboutPage;

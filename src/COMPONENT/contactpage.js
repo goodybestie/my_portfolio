@@ -1,4 +1,4 @@
-import  { useState, useEffect} from 'react';
+import  {  useEffect, forwardRef} from 'react';
 import { FaTwitter, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import Aos from 'aos';
@@ -6,31 +6,31 @@ import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 
-const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+const ContactPage =forwardRef((props, ref) => {
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   subject: '',
+  //   message: ''
+  // });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+  // const handleInputChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [name]: value
+  //   }));
+  // };
 
 useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log('Form submitted:', formData);
+  //   // Handle form submission logic here
+  // };
 
   const inputStyle = {
     width: '100%',
@@ -90,7 +90,7 @@ useEffect(() => {
         padding: "4rem 1rem",
       }}
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }} >
+      <div style={{ maxWidth: "1200px", margin: "0 auto" }} ref={ref} >
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <h1
@@ -459,6 +459,7 @@ useEffect(() => {
       </style>
     </div>
   );
-};
+}
+);
 
 export default ContactPage;

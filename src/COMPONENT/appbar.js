@@ -22,8 +22,8 @@ const drawerWidth = 240;
 const navItems = [{
   about:'About',
   //  work:"Work",
-  services:"Services",
-    testimonies:"Skills",
+  services:"Experiences",
+    testimonies:"Project",
      contact: 'Contact',
       cv:"Download CV"}];
 const logo = GoodyCode
