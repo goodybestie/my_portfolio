@@ -1,6 +1,6 @@
 import React from 'react';
 import {  Box, Typography, Card, CardContent, CardMedia, Button, Chip, Grid,Container} from '@mui/material';
-import { Visibility, Code, GitHub, Launch } from '@mui/icons-material';
+import { Visibility, Code, GitHub,  } from '@mui/icons-material';
 import Aos from 'aos';
 import {useEffect} from 'react'
 
@@ -18,7 +18,7 @@ useEffect(() => {
       description: 'A user get to order any cake of his/her choice, can also send an email.',
       image: '/exquisite.png',
       tags: ['React', 'TypeScript'],
-      liveDemo: '#',
+      liveDemo: 'https://cakebusiness-site.vercel.app/',
       code: '#'
     },
     {
@@ -27,15 +27,15 @@ useEffect(() => {
       description: 'A simple landing Page of a Photographer portfolio',
       image: '/portfolio.png',
       tags: ['Next.js', "TypeScript", 'Tailwind CSS'],
-      liveDemo: '#',
+      liveDemo: 'https://photographer-portfolio-gamma.vercel.app/',
       code: '#'
     },
     {
       id: 3,
-      title: 'Weather Dashboard',
-      description: 'Beautiful weather application with location-based forecasts, interactive maps, and weather alerts.',
-      image: '/api/placeholder/300/200',
-      tags: ['React', 'Chart.js', 'Weather API', 'PWA'],
+      title: 'learning management system',
+      description: 'A simple lms that allows users to learn and track their progress.',
+      image: '/learning.png',
+      tags: ["TypeScript", 'Next.js', 'Tailwind CSS'],
       external: true,
       link: true
     },
@@ -105,62 +105,7 @@ useEffect(() => {
                     image={project.image}
                     alt={project.title}
                   />
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      right: 0,
-                      bottom: 0,
-                      bgcolor: 'rgba(0,0,0,0.6)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: 2,
-                      opacity: 0,
-                      transition: 'opacity 0.3s ease',
-                      '&:hover': {
-                        opacity: 1
-                      }
-                    }}
-                  >
-                    {project.liveDemo && (
-                      <Button
-                        variant="contained"
-                        startIcon={<Visibility />}
-                        sx={{
-                          bgcolor: '#2196f3',
-                          '&:hover': {
-                            bgcolor: '#1976d2'
-                          }
-                        }}
-                      >
-                        Live Demo
-                      </Button>
-                    )}
-                    {project.code && (
-                      <Button
-                        variant="contained"
-                        startIcon={<Code />}
-                        sx={{
-                          bgcolor: '#424242',
-                          '&:hover': {
-                            bgcolor: '#212121'
-                          }
-                        }}
-                      >
-                        Code
-                      </Button>
-                    )}
-                    {project.external && (
-                      <Box sx={{ display: 'flex', gap: 1 }}>
-                        <Launch sx={{ color: 'white', fontSize: 24, cursor: 'pointer' }} />
-                        {project.link && (
-                          <GitHub sx={{ color: 'white', fontSize: 24, cursor: 'pointer' }} />
-                        )}
-                      </Box>
-                    )}
-                  </Box>
+                  
                 </Box>
 
                 {/* Project Content */}
@@ -210,20 +155,22 @@ useEffect(() => {
                   {/* Action Buttons */}
                   <Box sx={{ display: 'flex', gap: 2 }}>
                     {project.liveDemo && (
-                      <Button
-                        variant="contained"
-                        startIcon={<Visibility />}
-                        sx={{
-                          bgcolor: '#2196f3',
-                          textTransform: 'none',
-                          '&:hover': {
-                            bgcolor: '#1976d2'
-                          }
-                        }}
-                      >
-                        Live Demo
-                      </Button>
-                    )}
+  <Button
+    variant="contained"
+    startIcon={<Visibility />}
+    href={project.liveDemo}   // 👈 link goes here
+    target="_blank"           // 👈 opens in new tab
+    rel="noopener noreferrer" // 👈 security best practice
+    sx={{
+      bgcolor: '#2196f3',
+      textTransform: 'none',
+      '&:hover': { bgcolor: '#1976d2' }
+    }}
+  >
+    Live Demo
+  </Button>
+)}
+
                     {project.code && (
                       <Button
                         variant="outlined"
