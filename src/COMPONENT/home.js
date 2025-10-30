@@ -1,6 +1,6 @@
 import { Box, Typography, Button } from "@mui/material";
 import { FaHandsClapping } from "react-icons/fa6";
-import goodypic from "./IMAGE/goodypic.png"
+import goodypic from "./IMAGE/goodypic.jpg"
 import { VscLocation } from "react-icons/vsc";
 import { VscLayersActive } from "react-icons/vsc";
 import { FaChevronRight } from "react-icons/fa";
