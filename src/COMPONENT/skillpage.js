@@ -1,13 +1,13 @@
 import React from 'react';
-import {  Box, Typography, Card, CardContent, CardMedia, Button, Chip, Grid,Container} from '@mui/material';
-import { Visibility, Code, GitHub,  } from '@mui/icons-material';
+import { Box, Typography, Card, CardContent, CardMedia, Button, Chip, Grid, Container } from '@mui/material';
+import { Visibility, Code, GitHub, } from '@mui/icons-material';
 import Aos from 'aos';
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 
 import 'aos/dist/aos.css';
 
 const FeaturedProjects = React.forwardRef((props, ref) => {
-useEffect(() => {
+  useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
 
@@ -32,21 +32,22 @@ useEffect(() => {
     },
     {
       id: 3,
-      title: 'learning management system',
-      description: 'A simple lms that allows users to learn and track their progress.',
-      image: '/learning.png',
+      title: 'Cake Ordering Site',
+      description: 'A user get to order any cake of his/her choice, can also send an email.',
+      image: '/mk.png',
       tags: ["TypeScript", 'Next.js', 'Tailwind CSS'],
-      external: true,
-      link: true
+      liveDemo: 'https://mks-cake-website.vercel.app/',
+      code: '#'
+      
     },
     {
       id: 4,
-      title: 'Social Media Analytics',
-      description: 'Comprehensive analytics dashboard for social media metrics with AI-powered insights and recommendations.',
-      image: '/api/placeholder/300/200',
-      tags: ['Vue.js', 'D3.js', 'Python', 'FastAPI'],
-      external: true,
-      link: true
+      title: 'MTN -NG Analytics',
+      description: 'A comprehensive analytics dashboard designed for MTN Nigeria, visualizing key metrics such as network performance, user engagement, and revenue trends. Built with modern web technologies for real-time insights and interactive reporting.',
+      image: '/mtn.png',
+      tags: ['react', 'vite', ],
+      liveDemo: 'https://mtn-ng.vercel.app/',
+      code: '#'
     }
   ];
 
@@ -55,22 +56,22 @@ useEffect(() => {
       <Container maxWidth="lg" data-aos="fade-up" data-aos-delay="100">
         {/* Header Section */}
         <Box sx={{ textAlign: 'center', mb: 8 }}>
-          <Typography 
-            variant="h3" 
-            component="h1" 
-            sx={{ 
-              fontWeight: 'bold', 
-              color: '#1a1a1a', 
-              mb: 2 
+          <Typography
+            variant="h3"
+            component="h1"
+            sx={{
+              fontWeight: 'bold',
+              color: '#1a1a1a',
+              mb: 2
             }}
           >
             Featured Projects
           </Typography>
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              color: '#666', 
-              maxWidth: '600px', 
+          <Typography
+            variant="h6"
+            sx={{
+              color: '#666',
+              maxWidth: '600px',
               mx: 'auto',
               fontWeight: 400
             }}
@@ -83,8 +84,8 @@ useEffect(() => {
         <Grid container spacing={4} sx={{ mb: 8 }} data-aos="fade-up" data-aos-delay="100">
           {projects.map((project) => (
             <Grid item xs={12} md={6} key={project.id}>
-              <Card 
-                sx={{ 
+              <Card
+                sx={{
                   height: '100%',
                   display: 'flex',
                   flexDirection: 'column',
@@ -105,29 +106,29 @@ useEffect(() => {
                     image={project.image}
                     alt={project.title}
                   />
-                  
+
                 </Box>
 
                 {/* Project Content */}
                 <CardContent sx={{ flexGrow: 1, p: 3 }}>
-                  <Typography 
-                    variant="h5" 
-                    component="h3" 
-                    sx={{ 
-                      fontWeight: 600, 
-                      color: '#1a1a1a', 
-                      mb: 2 
+                  <Typography
+                    variant="h5"
+                    component="h3"
+                    sx={{
+                      fontWeight: 600,
+                      color: '#1a1a1a',
+                      mb: 2
                     }}
                   >
                     {project.title}
                   </Typography>
-                  
-                  <Typography 
-                    variant="body1" 
-                    sx={{ 
-                      color: '#666', 
-                      mb: 3, 
-                      lineHeight: 1.6 
+
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: '#666',
+                      mb: 3,
+                      lineHeight: 1.6
                     }}
                   >
                     {project.description}
@@ -155,21 +156,21 @@ useEffect(() => {
                   {/* Action Buttons */}
                   <Box sx={{ display: 'flex', gap: 2 }}>
                     {project.liveDemo && (
-  <Button
-    variant="contained"
-    startIcon={<Visibility />}
-    href={project.liveDemo}   // 👈 link goes here
-    target="_blank"           // 👈 opens in new tab
-    rel="noopener noreferrer" // 👈 security best practice
-    sx={{
-      bgcolor: '#2196f3',
-      textTransform: 'none',
-      '&:hover': { bgcolor: '#1976d2' }
-    }}
-  >
-    Live Demo
-  </Button>
-)}
+                      <Button
+                        variant="contained"
+                        startIcon={<Visibility />}
+                        href={project.liveDemo}   // 👈 link goes here
+                        target="_blank"           // 👈 opens in new tab
+                        rel="noopener noreferrer" // 👈 security best practice
+                        sx={{
+                          bgcolor: '#2196f3',
+                          textTransform: 'none',
+                          '&:hover': { bgcolor: '#1976d2' }
+                        }}
+                      >
+                        Live Demo
+                      </Button>
+                    )}
 
                     {project.code && (
                       <Button
@@ -198,24 +199,24 @@ useEffect(() => {
         {/* View All Projects Button */}
         <Box sx={{ textAlign: 'center' }}>
           <a href="https://github.com/dashboard">
-          <Button
-            variant="contained"
-            size="large"
-            startIcon={<GitHub />}
-            sx={{
-              bgcolor: '#1a1a1a',
-              color: 'white',
-              px: 4,
-              py: 1.5,
-              textTransform: 'none',
-              fontSize: '1.1rem',
-              '&:hover': {
-                bgcolor: '#333'
-              }
-            }}
-          >
-            View All Projects on GitHub
-          </Button>
+            <Button
+              variant="contained"
+              size="large"
+              startIcon={<GitHub />}
+              sx={{
+                bgcolor: '#1a1a1a',
+                color: 'white',
+                px: 4,
+                py: 1.5,
+                textTransform: 'none',
+                fontSize: '1.1rem',
+                '&:hover': {
+                  bgcolor: '#333'
+                }
+              }}
+            >
+              View All Projects on GitHub
+            </Button>
           </a>
         </Box>
       </Container>
