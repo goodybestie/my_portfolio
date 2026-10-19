@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FiArrowUpRight, FiCheck, FiCopy, FiGithub, FiLinkedin, FiMapPin, FiPhone } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
 import { profile } from '../data';
 import { Eyebrow, Magnetic, Reveal, ease } from './motion';
 
@@ -105,9 +106,19 @@ export default function Contact() {
               )}
             </AnimatePresence>
 
+            <a className="btn btn--whatsapp btn--lg" href={profile.whatsapp} target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp /> Chat on WhatsApp
+            </a>
+
             <ul className="contact-list">
               <li>
                 <FiPhone /> <a href={profile.phoneHref}>{profile.phone}</a>
+              </li>
+              <li>
+                <FaWhatsapp />
+                <a href={profile.whatsapp} target="_blank" rel="noopener noreferrer">
+                  WhatsApp · {profile.phone}
+                </a>
               </li>
               <li>
                 <FiMapPin /> {profile.location} · Remote or relocation

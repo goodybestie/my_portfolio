@@ -219,6 +219,25 @@ ul {
   color: var(--bg);
 }
 
+.btn--whatsapp {
+  justify-self: start;
+  background: #25d366;
+  color: #062e16;
+}
+
+.btn--whatsapp:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn--whatsapp svg {
+  font-size: 20px;
+}
+
+.btn--whatsapp:hover svg {
+  transform: none;
+}
+
 .btn--light {
   background: var(--bg);
   color: var(--ink);

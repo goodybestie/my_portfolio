@@ -11,6 +11,9 @@ export const profile = {
   email: 'goodnessbassey003@gmail.com',
   phone: '+234 902 604 8708',
   phoneHref: 'tel:+2349026048708',
+  whatsapp: `https://wa.me/2349026048708?text=${encodeURIComponent(
+    "Hi Goodness, I came across your portfolio and I'd like to chat."
+  )}`,
   github: 'https://github.com/goodybestie',
   linkedin: 'https://www.linkedin.com/in/goodness-bassey-804254299',
   cv,
