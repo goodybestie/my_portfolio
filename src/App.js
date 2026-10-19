@@ -1,56 +1,36 @@
+import { MotionConfig, motion, useScroll, useSpring } from 'framer-motion';
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import Marquee from './components/Marquee';
+import About from './components/About';
+import Work from './components/Work';
+import Services from './components/Services';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import { stack } from './data';
 
-import './App.css';
-import { Box } from "@mui/material";
-import DrawerAppBar from "./COMPONENT/appbar" 
-import Homepage from "./COMPONENT/home"
-import AboutPage from "./COMPONENT/Aboutpage"
-import SkillPage from "./COMPONENT/skillpage"
-import ContactPage from "./COMPONENT/contactpage"
-import CopyRight from "./COMPONENT/copyright"
-import React, { useRef } from 'react';
-import ServicesPage from "./COMPONENT/Servicespage"
-
-function App() {
-  const aboutPageRef = useRef(null);
-  const skillPageRef = useRef(null);
-  const servicesPageRef = useRef(null);
-  const contactPageRef = useRef(null);
-  const homePageRef= useRef(null)
-
-  const scrollToElement = (ref) => {
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.log('Ref is null or not defined.');
-    }
-  };
-
-  return (
-    <>
-      <Box sx={{backgroundColor:"black"}}>
-        <DrawerAppBar
-          aboutPageRef={aboutPageRef}
-          skillPageRef={skillPageRef}
-          servicesPageRef={servicesPageRef}
-          contactPageRef={contactPageRef}
-          scrollToElement={scrollToElement}
-        />
-        <Homepage 
-        ref={homePageRef}
-         contactPageRef={contactPageRef}
-        />
-        <AboutPage ref={aboutPageRef}/>
-        <SkillPage ref={skillPageRef}/>
-        {/* <WorkPage ref={workPageRef}/> */}
-        <ServicesPage ref={servicesPageRef}  />
-        <ContactPage ref={contactPageRef}/>
-      <Box sx={{ backgroundColor: "#f5f5f5"}}>
-      <CopyRight homePageRef={homePageRef} scrollToElement={() => scrollToElement(homePageRef)} />
-
-      </Box>
-      </Box>
-    </>
-  );
+function ScrollProgress() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, { stiffness: 140, damping: 30 });
+  return <motion.div className="scroll-progress" style={{ scaleX }} />;
 }
 
-export default App;
+export default function App() {
+  return (
+    <MotionConfig reducedMotion="user">
+      <ScrollProgress />
+      <Nav />
+      <main>
+        <Hero />
+        <Marquee items={stack} />
+        <About />
+        <Work />
+        <Services />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
+    </MotionConfig>
+  );
+}
