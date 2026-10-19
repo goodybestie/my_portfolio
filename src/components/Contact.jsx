@@ -117,7 +117,7 @@ export default function Contact() {
               <li>
                 <FaWhatsapp />
                 <a href={profile.whatsapp} target="_blank" rel="noopener noreferrer">
-                  WhatsApp · {profile.phone}
+                  WhatsApp · {profile.whatsappNumber}
                 </a>
               </li>
               <li>
