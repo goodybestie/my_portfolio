@@ -4,7 +4,7 @@ import { principles, profile, stack, stats } from '../data';
 import { Counter, Eyebrow, Reveal, ScrollText } from './motion';
 
 const statement =
-  "I build the parts of a product people actually touch. For five years I've been turning designs into responsive, fast interfaces with React, Next.js and TypeScript — growing from trainee to front-end developer at FutureLabs, and shipping for teams and clients along the way.";
+  "I build the parts of a product people actually touch. For five years I've been turning designs into responsive, fast interfaces with React, Next.js and TypeScript — growing from trainee to software engineer at FutureLabs, and shipping for teams and clients along the way. Behind those interfaces, I design REST APIs with Django and FastAPI, model data in PostgreSQL and MySQL, and deploy to Vercel, Netlify and AWS.";
 
 export default function About() {
   const imgRef = useRef(null);

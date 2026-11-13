@@ -83,11 +83,11 @@ export default function Hero() {
         initial="hidden"
         animate="show"
         transition={{ staggerChildren: 0.12, delayChildren: 0.15 }}
-        aria-label="Frontend developer crafting interfaces people love to use."
+        aria-label="Full-stack engineer building products people love to use."
       >
         <span className="mask hero-line" aria-hidden="true">
           <motion.span className="mask-inner" variants={line}>
-            Frontend
+            Full-stack
             <motion.span
               className="hero-pill"
               initial={{ width: '0em', opacity: 0 }}
@@ -96,12 +96,12 @@ export default function Hero() {
             >
               <img src={profile.portrait} alt="" />
             </motion.span>
-            developer
+            engineer
           </motion.span>
         </span>
         <span className="mask hero-line" aria-hidden="true">
           <motion.span className="mask-inner" variants={line}>
-            crafting interfaces
+            building products
           </motion.span>
         </span>
         <span className="mask hero-line" aria-hidden="true">
@@ -118,8 +118,9 @@ export default function Hero() {
         transition={{ delay: 0.8, duration: 1, ease }}
       >
         <p className="hero-intro">
-          I'm <strong>{profile.name}</strong> — a front-end developer with 5 years of experience building responsive,
-          user-focused websites and web apps with React, Next.js and TypeScript.
+          I'm <strong>{profile.name}</strong> — a full-stack software engineer with 5 years of experience building responsive,
+          user-focused web products with React, Next.js and TypeScript on the frontend, and Python
+          (Django/FastAPI) and PostgreSQL on the backend.
         </p>
         <div className="hero-actions">
           <Magnetic>

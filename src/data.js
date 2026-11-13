@@ -5,7 +5,7 @@ export const profile = {
   name: 'Goodness Bassey',
   fullName: 'Goodness Abasiakama Bassey',
   brand: 'GoodyCode',
-  role: 'Front-End Developer',
+  role: 'Full-Stack Software Engineer',
   location: 'Akwa Ibom, Nigeria',
   timezone: 'Africa/Lagos',
   email: 'goodnessbassey003@gmail.com',
@@ -31,7 +31,8 @@ export const navLinks = [
 
 export const stack = [
   'React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'HTML5', 'CSS3',
-  'REST APIs', 'Figma', 'WordPress', 'Git & GitHub', 'SEO', 'Framer Motion',
+  'Python', 'Django', 'Flask', 'FastAPI', 'PostgreSQL', 'MySQL', 'REST APIs',
+  'Vercel', 'Netlify', 'AWS', 'Figma', 'Git & GitHub', 'SEO', 'Framer Motion',
 ];
 
 // `text` renders as-is; `value` counts up from zero.
@@ -97,19 +98,19 @@ export const projects = [
 
 export const services = [
   {
-    title: 'Front-End Development',
-    desc: 'Responsive websites and web apps with React, Next.js (App Router) and TypeScript, built from reusable components.',
+    title: 'Full-Stack Web Development',
+    desc: 'End-to-end web apps: React, Next.js (App Router) and TypeScript on the frontend, wired to a Python backend and deployed to Vercel, Netlify or AWS.',
     image: '/portfolio.png',
+  },
+  {
+    title: 'Backend & APIs',
+    desc: 'REST APIs with Django and FastAPI, PostgreSQL and MySQL data models, authentication, and frontends that handle every loading, empty and error state.',
+    image: '/mtn.png',
   },
   {
     title: 'Design-to-Code & UI',
     desc: 'Turning Figma designs and brand guidelines into pixel-faithful, interactive interfaces.',
     image: '/exquisite.png',
-  },
-  {
-    title: 'API Integration',
-    desc: 'Connecting frontends to REST APIs with proper loading, empty, success and error states.',
-    image: '/mtn.png',
   },
   {
     title: 'Performance, SEO & Fixes',
@@ -120,13 +121,13 @@ export const services = [
 
 export const experience = [
   {
-    role: 'Front-End Developer',
+    role: 'Software Engineer',
     company: 'FutureLabs',
     location: 'Ikot Ekpene',
     period: 'Sep 2021 — Present',
     type: 'Full-time',
     description:
-      'Joined as a trainee and was retained as a front-end developer after completing the training programme. I build and maintain responsive websites and web applications.',
+      'Joined as a trainee and was retained as a software engineer after completing the training programme. I build and maintain responsive websites and web applications.',
     achievements: [
       'Develop responsive sites and apps with HTML, CSS, JavaScript, TypeScript, React and Next.js',
       'Build reusable UI components with consistent spacing, typography and visual hierarchy',

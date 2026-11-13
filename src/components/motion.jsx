@@ -4,6 +4,7 @@ import {
   motion,
   useInView,
   useMotionValue,
+  useReducedMotion,
   useScroll,
   useSpring,
   useTransform,
@@ -86,22 +87,30 @@ function ScrollWord({ children, progress, range }) {
   );
 }
 
-/** Counts up from 0 once visible. */
+/**
+ * Counts up from 0 once visible. The real value is rendered by default so
+ * screenshots, crawlers, link previews and reduced-motion users never see "0".
+ */
 export function Counter({ value, suffix = '' }) {
   const ref = useRef(null);
+  const reduceMotion = useReducedMotion();
   const inView = useInView(ref, { once: true, margin: '0px 0px -10% 0px' });
   useEffect(() => {
-    if (!inView || !ref.current) return;
+    const node = ref.current;
+    if (!inView || !node || reduceMotion) return;
     const controls = animate(0, value, {
       duration: 1.8,
       ease,
       onUpdate: (v) => {
-        if (ref.current) ref.current.textContent = `${Math.round(v)}${suffix}`;
+        node.textContent = `${Math.round(v)}${suffix}`;
       },
     });
-    return () => controls.stop();
-  }, [inView, value, suffix]);
-  return <span ref={ref}>0{suffix}</span>;
+    return () => {
+      controls.stop();
+      node.textContent = `${value}${suffix}`;
+    };
+  }, [inView, value, suffix, reduceMotion]);
+  return <span ref={ref}>{`${value}${suffix}`}</span>;
 }
 
 /** Pulls its child gently toward the cursor. */
