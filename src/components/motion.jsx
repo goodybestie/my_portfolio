@@ -139,11 +139,12 @@ export function Magnetic({ children, strength = 0.35 }) {
 }
 
 /** Small mono label used above section titles, e.g. "(02) Selected work". */
-export function Eyebrow({ index, children, light }) {
+export function Eyebrow({ index, children, light, layer }) {
   return (
     <Reveal className={`eyebrow${light ? ' eyebrow--light' : ''}`} y={12}>
       <span className="eyebrow-index">({index})</span>
       <span>{children}</span>
+      {layer && <span className="eyebrow-layer">{layer} layer</span>}
     </Reveal>
   );
 }

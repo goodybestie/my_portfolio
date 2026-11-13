@@ -97,7 +97,7 @@ export default function Work() {
     <section id="work" className="section work">
       <div className="container">
         <div className="section-head">
-          <Eyebrow index="02">Selected work</Eyebrow>
+          <Eyebrow index="02" layer="UI">Selected work</Eyebrow>
           <h2 className="section-title">
             <SplitWords text="Projects I've designed, built and shipped." />
           </h2>

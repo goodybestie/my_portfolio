@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FiArrowDownRight, FiArrowUpRight } from 'react-icons/fi';
-import { SiNextdotjs, SiReact, SiTypescript } from 'react-icons/si';
+import { SiPostgresql, SiPython, SiReact } from 'react-icons/si';
 import { profile } from '../data';
 import { Magnetic, ease } from './motion';
 import { scrollToId } from './Nav';
@@ -25,8 +25,8 @@ const line = {
 
 const chips = [
   { icon: <SiReact />, label: 'React', className: 'chip-float chip-float--1', delay: 1.2 },
-  { icon: <SiTypescript />, label: 'TypeScript', className: 'chip-float chip-float--2', delay: 1.35 },
-  { icon: <SiNextdotjs />, label: 'Next.js', className: 'chip-float chip-float--3', delay: 1.5 },
+  { icon: <SiPython />, label: 'Django', className: 'chip-float chip-float--2', delay: 1.35 },
+  { icon: <SiPostgresql />, label: 'PostgreSQL', className: 'chip-float chip-float--3', delay: 1.5 },
 ];
 
 const squares = ['sq sq--1', 'sq sq--2', 'sq sq--3', 'sq sq--4', 'sq sq--5'];

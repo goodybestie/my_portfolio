@@ -10,7 +10,7 @@ export default function Services() {
   return (
     <section id="services" className="section services">
       <div className="container">
-        <Eyebrow index="03">Services</Eyebrow>
+        <Eyebrow index="03" layer="API">Services</Eyebrow>
         <div className="services-grid">
           <div>
             <Reveal as="h2" className="section-title services-title">

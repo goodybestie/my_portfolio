@@ -13,7 +13,7 @@ export default function Experience() {
     <section id="experience" className="section experience">
       <div className="container">
         <div className="section-head">
-          <Eyebrow index="04" light>Experience</Eyebrow>
+          <Eyebrow index="04" light layer="Data">Experience</Eyebrow>
           <h2 className="section-title">
             <SplitWords text="Where I've made an impact." />
           </h2>

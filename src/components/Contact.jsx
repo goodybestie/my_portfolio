@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <section id="contact" className="section contact dot-grid">
       <div className="container">
-        <Eyebrow index="05">Contact</Eyebrow>
+        <Eyebrow index="05" layer="Cloud">Contact</Eyebrow>
 
         <motion.h2
           className="contact-title"
